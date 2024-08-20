@@ -14,7 +14,7 @@
   --col-deepblue2: #4578e3;
   --col-deepblue3: #4578e3;
   --bg-color: #11111b;
-  --second-bg-color: #1e2730;
+  --second-bg-color: #0d141c;
   --services-box: #1e2730;
   --border: #111;
   --k-bg-color: #0d141c;
@@ -1338,29 +1338,6 @@ textarea {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-40px); /* ارتفاع القفزة */
+        transform: translateY(-20px); /* ارتفاع القفزة */
     }
-}
-
-
-
-/* إظهار preloader بشكل افتراضي */
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #121212;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 99999;
-}
-
-/* إخفاء preloader عند إضافة الفئة hidden */
-#preloader.hidden {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
