@@ -14,7 +14,7 @@
   --col-deepblue2: #4578e3;
   --col-deepblue3: #4578e3;
   --bg-color: #11111b;
-  --second-bg-color: #0d141c;
+  --second-bg-color: #11111b;
   --services-box: #1e2730;
   --border: #111;
   --k-bg-color: #0d141c;
@@ -31,10 +31,69 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
+
+/* تعطيل التمرير */
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
+
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: #121212; /* لون خلفية التحميل */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.raccoon-logo {
+    width: 100px; /* حجم الشعار */
+    height: auto;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* ارتفاع القفزة */
+    }
+}
+
+
 body {
+  background: canvas;
   background: var(--bg-color);
   color: var(--text-color);
 }
+body::before {
+  --size: 45px;
+  --line: color-mix(in lch, canvasText, transparent 85%);
+  content: '';
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background: linear-gradient(
+        90deg,
+        white 1px,
+        transparent 1px var(--size)
+      )
+      50% 50% / var(--size) var(--size),
+    linear-gradient(white 1px, transparent 1px var(--size)) 50% 50% /
+      var(--size) var(--size);
+  -webkit-mask: linear-gradient(-25deg, transparent 30%, white);
+          mask: linear-gradient(-25deg, transparent 30%, white);
+  top: 0;
+  transform-style: flat;
+  pointer-events: none;
+}
+
 .navbar-icons {
   display: flex;
   justify-content: space-between;
@@ -361,6 +420,9 @@ span {
 }
 .portfolio {
   background: var(--second-bg-color);
+}
+.portfolio i{
+  font-size: 3rem;
 }
 .portfolio h2 {
   margin-bottom: 0;
@@ -966,6 +1028,9 @@ h1 {
   .comment-button {
     width: 180px;
   }
+  .Services-box{
+  max-width: 30rem;
+}
 }
 @media (max-width: 480px) {
   h1 {
