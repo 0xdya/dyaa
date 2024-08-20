@@ -37,7 +37,6 @@ html, body {
     overflow: hidden;
     height: 100%;
 }
-
 #preloader {
     position: fixed;
     left: 0;
@@ -47,16 +46,18 @@ html, body {
     z-index: 1000;
     background-color: #121212; /* لون خلفية التحميل */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 .raccoon-logo {
     width: 100px; /* حجم الشعار */
     height: auto;
     animation: bounce 2s infinite;
 }
-
+#preloader p{
+  font-size: 1.8rem;
+}
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -283,6 +284,9 @@ section {
   100% {
     transform: translateY(0);
   }
+}
+.home-content {
+  z-index: 2;
 }
 .home-content h3 {
   font-size: 3.2rem;
