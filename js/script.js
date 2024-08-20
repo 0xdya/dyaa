@@ -1,33 +1,3 @@
-window.addEventListener('load', function() {
-    const images = document.images;
-    const totalImages = images.length;
-    let imagesLoaded = 0;
-
-    // التحقق من تحميل كل صورة
-    function imageLoaded() {
-        imagesLoaded++;
-        if (imagesLoaded === totalImages) {
-            document.getElementById('preloader').classList.add('hidden');
-        }
-    }
-
-    // إذا لم يكن هناك صور في الصفحة
-    if (totalImages === 0) {
-        imageLoaded();
-    } else {
-        // ربط حدث التحميل بكل صورة
-        for (let i = 0; i < totalImages; i++) {
-            if (images[i].complete) {
-                imageLoaded();
-            } else {
-                images[i].addEventListener('load', imageLoaded);
-                images[i].addEventListener('error', imageLoaded); // في حالة خطأ التحميل
-            }
-        }
-    }
-});
-
-
 ScrollReveal({reset:false,distance:"80px",duration:2e3,delay:200});ScrollReveal().reveal(".home-content, .heading, .cards",{origin:"top"});ScrollReveal().reveal(".home-img, services-container,.btt, portfolio-box, contact form, .card-item, .about-content p",{origin:"bottom"});ScrollReveal().reveal(".home-content h1, .about-img, .cards, .Services-box",{origin:"left"});ScrollReveal().reveal(".home-content p, .about-content",{origin:"bottom"});ScrollReveal().reveal(".about-content, .heading-ms",{origin:"top"});ScrollReveal().reveal(".navbar",{origin:"right"});const typed=new Typed(".multiple-text",{strings:["a Programmer","an Editor","an artist","a Designer"],typeSpeed:100,backSpeed:100,backDelay:1e3,loop:true});document.addEventListener("DOMContentLoaded",function(){let observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("start-animation");observer.unobserve(entry.target)}})},{threshold:.1});let elements=document.querySelectorAll(".skill-per");elements.forEach(element=>{observer.observe(element)})});const scrollers=document.querySelectorAll(".scroller");if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){addAnimation()}function addAnimation(){scrollers.forEach(scroller=>{scroller.setAttribute("data-animated",true);const scrollerInner=scroller.querySelector(".scroller__inner");const scrollerContent=Array.from(scrollerInner.children);scrollerContent.forEach(item=>{const duplicatedItem=item.cloneNode(true);duplicatedItem.setAttribute("aria-hidden",true);scrollerInner.appendChild(duplicatedItem)})})}document.getElementById("reviewForm").addEventListener("submit",function(event){setTimeout(()=>{event.target.reset()},3e3)});document.querySelectorAll(".stars-container .star").forEach(star=>{star.addEventListener("click",function(){const value=this.getAttribute("data-value");document.getElementById("stars").value=value;updateStars(value)});star.addEventListener("mouseover",function(){const value=this.getAttribute("data-value");updateStars(value)});star.addEventListener("mouseout",function(){const value=document.getElementById("stars").value;updateStars(value)})});function updateStars(value){document.querySelectorAll(".stars-container .star").forEach(star=>{if(parseInt(star.getAttribute("data-value"))<=value){star.classList.add("checked")}else{star.classList.remove("checked")}})}document.getElementById("reviewForm").addEventListener("submit",function(event){const emailInput=document.getElementById("email");const emailValue=emailInput.value;const gmailPattern=/^[^\s@]+@gmail\.com$/;if(!gmailPattern.test(emailValue)){alert("  تستخدم بريد مزيف  - _ -  ؟                                                               استخدم بريد حقيقي ليتم ارسال الرسالة");emailInput.focus();event.preventDefault()}});document.addEventListener("DOMContentLoaded",function(){var icon=document.querySelector(".profile-preview-btn");var selectItems=document.querySelector(".select-items");var selectedImage=document.getElementById("profile-picture-preview");icon.addEventListener("click",function(){selectItems.classList.toggle("select-hide");selectItems.style.display=selectItems.style.display==="none"||!selectItems.style.display?"grid":"none"});document.querySelectorAll(".select-items div").forEach(function(item){item.addEventListener("click",function(){var imgSrc=item.getAttribute("data-img");selectedImage.src=imgSrc;selectItems.style.display="none"})});document.addEventListener("click",function(event){if(!event.target.closest(".profile-preview-btn")&&!event.target.closest(".select-items")){selectItems.style.display="none"}})});function setImageValue(value){document.getElementById("img-value").value=value}const sidebar=document.getElementById("sidebar");const toggleButton=document.getElementById("navbar-toggle");const closeButton=document.getElementById("closebtn");function toggleSidebar(){if(sidebar.classList.contains("open")){sidebar.classList.remove("open");sidebar.classList.add("close");toggleButton.classList.remove("open")}else{sidebar.classList.remove("close");sidebar.classList.add("open");toggleButton.classList.add("open")}}toggleButton.addEventListener("click",toggleSidebar);closeButton.addEventListener("click",toggleSidebar);document.addEventListener("click",function(event){if(sidebar.classList.contains("open")&&!toggleButton.contains(event.target)&&!sidebar.contains(event.target)){sidebar.classList.remove("open");sidebar.classList.add("close");toggleButton.classList.remove("open")}});const sidebarLinks=sidebar.querySelectorAll("a");sidebarLinks.forEach(link=>{link.addEventListener("click",function(){if(sidebar.classList.contains("open")){sidebar.classList.remove("open");sidebar.classList.add("close");toggleButton.classList.remove("open")}})});
 document.addEventListener("DOMContentLoaded", function() {
             const dateElements = document.querySelectorAll('.date');
