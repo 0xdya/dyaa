@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:wght@400;500&family=Zain:wght@200;300;400;700;800;900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:wght@400;500&family=Pacifico&family=Zain:wght@200;300;400;700;800;900&display=swap";
 * {
   margin: 0;
   padding: 0;
@@ -1325,4 +1325,42 @@ textarea {
 
 .btn.active + .edu {
     display: block;
+}
+
+.raccoon-logo {
+    width: 100px; /* حجم الشعار */
+    height: auto;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px); /* ارتفاع القفزة */
+    }
+}
+
+
+
+/* إظهار preloader بشكل افتراضي */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #121212;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+/* إخفاء preloader عند إضافة الفئة hidden */
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
