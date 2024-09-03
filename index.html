@@ -24,7 +24,9 @@
  </head>
  <body>
   <div id="preloader">
-   <img src="img/1.webp" alt="page is loading" class="raccoon-logo">
+
+<div class="spinner"></div>
+  <!--- <img src="https://d1shop.web.app/img/logo.svg" alt="page is loading" class="raccoon-logo">
 <div aria-label="Loading..." role="status" class="loader">
   <svg class="icon" viewBox="0 0 256 256">
     <line x1="128" y1="32" x2="128" y2="64" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
@@ -38,7 +40,7 @@
   </svg>
   <span class="loading-text">Loading...</span>
 </div>  
-
+-->
 </div>
   <!-- header design -->
   <div class="navbar-section">
@@ -143,63 +145,6 @@
     </div>
    </div>
   </section>
-  <!-- portfolio section design -->
-  <section class="portfolio" id="project">
-   <h2 class="heading top">Last <span> Projects</span>
-   </h2>
-   <div class="card-list">
-    <a href="https://dhiya2007.github.io/gallery/" class="card-item bottom">
-     <img src="card/cam.gif" alt="Card Image" />
-     <span class="designer">Photos</span>
-     <h3>curated gallery of high-resolution photos that I have captured, showcasing my photography skills.</h3>
-     <div class="arrow">
-      <i class='bx bx-right-arrow-alt'></i>
-     </div>
-    </a>
-    <a href="https://dya-quran.web.app/" class="card-item bottom">
-     <video autoplay muted loop id="video">
-      <source src="card/quran.mp4" type="video/mp4" /> Your browser does not support the video tag.
-     </video>
-     <span class="developer">quran</span>
-     <p class="zain"> موقع سماع وتحميل القران أونلاين بأصوات العديد من كبار القراء </p>
-     <div class="arrow">
-      <i class='bx bx-right-arrow-alt'></i>
-     </div>
-    </a>
-    <a href="https://el-ghazali.web.app" class="card-item bottom">
-     <img src="card/web.gif" alt="Card Image" />
-     <span class="editor">Shcool</span>
-     <h3>A website I created for my high school.</h3>
-     <div class="arrow">
-      <i class='bx bx-right-arrow-alt'></i>
-     </div>
-    </a>
-    <a href="https://dhiya2007.github.io/DRAW/" class="card-item bottom">
-     <img src="card/draw.gif" alt="Card Image" />
-     <span class="designer">Art</span>
-     <h3>Website Showcasing My Unique Drawings ✨</h3>
-     <div class="arrow">
-      <i class='bx bx-right-arrow-alt'></i>
-     </div>
-    </a>
-    <a href="https://dhiya2007.github.io/contact" class="card-item bottom">
-     <img src="card/contact.gif" alt="Card Image" />
-     <span class="contact">Contact</span>
-     <h3>A website to connect with me.</h3>
-     <div class="arrow">
-      <i class='bx bx-right-arrow-alt'></i>
-     </div>
-    </a>
-    <a href="https://dhiya2007.github.io/contact/about_me.html" class="card-item bottom">
-     <img src="card/about.gif" alt="Card Image" />
-     <span class="contact">About</span>
-     <h3>A site with basic details about me.</h3>
-     <div class="arrow">
-      <i class='bx bx-right-arrow-alt'></i>
-     </div>
-    </a>
-   </div>
-  </section>
   <!---- skills bar --->
   <section class="skills-sec" id="skills">
    <h2 class="heading top">My <span>Skills!</span>
@@ -218,7 +163,23 @@
       <span class="skill-title">CSS</span>
       <div class="skill-bar">
        <span class="skill-per css">
+        <span class="tooltip">85%</span>
+       </span>
+      </div>
+     </div>
+     <div class="skill-box">
+      <span class="skill-title">scss</span>
+      <div class="skill-bar">
+       <span class="skill-per scss">
         <span class="tooltip">80%</span>
+       </span>
+      </div>
+     </div>
+     <div class="skill-box">
+      <span class="skill-title">tailwind</span>
+      <div class="skill-bar">
+       <span class="skill-per tailwind">
+        <span class="tooltip">60%</span>
        </span>
       </div>
      </div>
@@ -251,14 +212,6 @@
       <div class="skill-bar">
        <span class="skill-per php">
         <span class="tooltip">40%</span>
-       </span>
-      </div>
-     </div>
-     <div class="skill-box">
-      <span class="skill-title">tailwind</span>
-      <div class="skill-bar">
-       <span class="skill-per tailwind">
-        <span class="tooltip">60%</span>
        </span>
       </div>
      </div>
@@ -317,6 +270,74 @@
       </li>
      </ul>
     </div>
+   </div>
+  </section>
+  <!-- project section design -->
+  <section class="portfolio" id="project">
+   <h2 class="heading top">Last <span> Projects</span>
+   </h2>
+   <div class="card-list">
+    <a href="https://d1shop.web.app" class="card-item bottom">
+     <img src="card/d1.jpg" alt="Card Image" />
+     <h1 class="d1">D1 Shop 
+     </h1>
+     <h1 class="shop">
+     Create your own website without coding knowledge at an affordable price 
+     </h1>
+     <div class="arrow">
+      <i class='bx bx-right-arrow-alt'></i>
+     </div>
+    </a>
+    <a href="https://dhiya2007.github.io/gallery/" class="card-item ">
+     <img src="card/cam.gif" alt="Card Image" />
+     <h1 class="d1">Photos</h1>
+     <h1 class="shop">curated gallery of high-resolution photos that I have captured, showcasing my photography skills.</h1>
+     <div class="arrow">
+      <i class='bx bx-right-arrow-alt'></i>
+     </div>
+    </a>
+    <a href="https://dya-quran.web.app/" class="card-item ">
+     <video autoplay muted loop id="video">
+      <source src="card/quran.mp4" type="video/mp4" /> Your browser does not support the video tag.
+     </video>
+     <h1 class="d1">quran</h1>
+     <h1 class="zain shop"> موقع سماع وتحميل القران أونلاين بأصوات العديد من كبار القراء </h1>
+     <div class="arrow">
+      <i class='bx bx-right-arrow-alt'></i>
+     </div>
+    </a>
+    <a href="https://el-ghazali.web.app" class="card-item ">
+     <img src="card/web.gif" alt="Card Image" />
+     <h1 class="d1">Shcool</h1>
+     <h1 class="shop">A website I created for my high school.</h1>
+     <div class="arrow">
+      <i class='bx bx-right-arrow-alt'></i>
+     </div>
+    </a>
+    <a href="https://dhiya2007.github.io/DRAW/" class="card-item ">
+     <img src="card/draw.gif" alt="Card Image" />
+     <h1 class="d1">Art</h1>
+     <h1 class="shop">Website Showcasing My Unique Drawings ✨</h1>
+     <div class="arrow">
+      <i class='bx bx-right-arrow-alt'></i>
+     </div>
+    </a>
+    <a href="https://dhiya2007.github.io/contact" class="card-item ">
+     <img src="card/contact.gif" alt="Card Image" />
+     <h1 class="d1">Contact</h1>
+     <h1 class="shop">A website to connect with me.</h1>
+     <div class="arrow">
+      <i class='bx bx-right-arrow-alt'></i>
+     </div>
+    </a>
+    <a href="https://dhiya2007.github.io/contact/about_me.html" class="card-item ">
+     <img src="card/about.gif" alt="Card Image" />
+     <h1 class="d1">About</h1>
+     <h1 class="shop">A site with basic details about me.</h1>
+     <div class="arrow">
+      <i class='bx bx-right-arrow-alt'></i>
+     </div>
+    </a>
    </div>
   </section>
   <!-- contact section design -->
