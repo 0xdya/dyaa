@@ -12,19 +12,14 @@
   --col-deepblue1: #4578e3;
   --col-deepblue2: #4578e3;
   --col-deepblue3: #4578e3;
-  --bg-color: #11111b;
-  --second-bg-color: #11111b;
-  --services-box: #1e2730;
+  --bg-color: #0e100f;
+  --services-box: #2A2D2E;
   --border: #111;
-  --k-bg-color: #0d141c;
-  --logo1-text: #8848c3;
-  --border-color: #00bfa5;
-  --logo-text: #5d76e9;
-  --mult-text: #fc0;
-  --text-color: #feffff;
-  --main-color: #0ef;
-  --btn-color: #0ef;
-  --soc-color: #7f8c8d;
+  --green: #88CE02;
+  --mult-text-2: #fc2;
+  --text-color: #FFFFFF;
+  --gsap-color: #fffbe0;
+  --social-media: #7f8c8d;
 }
 html {
   font-size: 62.5%;
@@ -50,32 +45,29 @@ html, body {
     justify-content: center;
     align-items: center;
 }
+/*
 .raccoon-logo {
-    width: 100px; /* حجم الشعار */
+    width: 100px;
     height: auto;
     animation: bounce-raccon 2s infinite;
-}/* From Uiverse.io by Yaya12085 */ 
+}
 .loader {
   gap: 1rem;
   display: flex;
   align-items: center;
 }
-
 .icon {
   height: 2.6rem;
   width: 2.6rem;
   animation: spin 1s linear infinite;
-  stroke: #fc0;
+  stroke: #111;
 }
-
 .loading-text {
   font-size: 2.2rem;
   line-height: 1rem;
   font-weight: 500;
-  color: #fc0;
+  color: #000;
 }
-
-
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -86,10 +78,13 @@ html, body {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-20px); /* ارتفاع القفزة */
+        transform: translateY(-20px);
     }
 }
-
+*/
+.services{
+  margin: 4rem 0;
+}
 
 body {
   background: canvas;
@@ -184,7 +179,7 @@ body::before {
   padding: 15px 25px;
   text-decoration: none;
   font-size: 22px;
-  color: #fff;
+  color: var(--text-color);
   display: block;
   transition: 0.3s;
 }
@@ -278,9 +273,9 @@ section {
   cursor: default;
 }
 .logo-a {
-  color: #0fe;
+  color: #fffbe0;
   font-size: 2.2rem;
-  text-shadow: 0 0 25px #0fe;
+  text-shadow: 0 0 25px #fffbe0;
   font-weight: 400;
   font-family: "Pacifico";
   cursor: default;
@@ -321,10 +316,10 @@ section {
   margin-bottom: 2rem;
 }
 span {
-  color: var(--main-color);
+  color: var(--text-color);
 }
 .home-content h1 {
-  color: var(--logo-text);
+  color: var(--gsap-color);
   text-align: center;
   font-size: 5.6rem;
   font-weight: 700;
@@ -340,19 +335,20 @@ span {
   width: 4rem;
   height: 4rem;
   background: transparent;
-  border: 0.2rem solid var(--soc-color);
+  border: 0.2rem solid var(--social-media);
   border-radius: 50%;
   font-size: 2rem;
-  color: var(--soc-color);
+  color: var(--social-media);
   margin: 3rem 1.5rem 3rem 0;
   transition: 0.5s ease;
 }
 .social-media a:hover {
   font-size: 3rem;
-  background: var(--main-color);
-  color: var(--second-bg-color);
-  box-shadow: 0 0 1rem var(--main-color);
+  background: var(--text-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 1rem var(--text-color);
 }
+
 .btn, .btn-about {
   display: inline-block;
   padding: 1rem 2.8rem;
@@ -360,11 +356,14 @@ span {
   border-radius: 4rem;
   border: 0.5px solid #fdfdfdfd;
   font-size: 1.6rem;
-  color: #fc0;
+  color: var(--green);
   letter-spacing: 0.1rem;
   font-weight: 600;
   transition: 0.5s ease;
   margin-top: 12px;
+}
+.btn-about{
+  color: var(--mult-text-2);
 }
 .about-content{
   display: flex;
@@ -372,12 +371,12 @@ span {
   gap: 2rem;
 }
 .btn:hover, .btn-about:hover {
-  background-color: #fc2;
+  background-color: var(--mult-text-2);
   color: #111;
   border: none;
 }
   .cloum {
-    background-color: #0d141c;
+    background-color: #11111bb;
     padding: 2rem;
     border-radius: 10px;
     border: 1px solid #fdfdfdfd;
@@ -389,11 +388,11 @@ span {
   right: 8%;
 }
 .about {
-  background: var(--second-bg-color);
+  background: var(--bg-color);
 }
 .multiple-text {
   margin-left: 0.3%;
-  color: var(--mult-text);
+  color: var(--green);
 }
 .about-img img {
   pointer-events: none;
@@ -442,24 +441,26 @@ span {
   padding: 3rem 2rem 4rem;
   border-radius: 2rem;
   text-align: center;
+  color: var(--text-color);
   border: 0.2rem solid var(--border);
   transition: 0.5s ease;
 }
 .Services-container .Services-box:hover {
-  border-color: var(--border-color);
+  border-color: var(--green);
   transform: scale(1.02);
 }
 .Services-box h3 {
   font-size: 2.6rem;
-  color: #ffff;
+  color: var(--text-color);
 }
 .Services-box p {
   font-size: 1.6rem;
   margin: 1rem 0 3rem;
-  color: #fff;
+  color: var(--text-color);
 }
 .portfolio {
-  background: var(--second-bg-color);
+  margin: 6rem 0;
+  background: var(--bg-color);
 }
 .portfolio i{
   font-size: 3rem;
@@ -497,7 +498,7 @@ span {
   .cloum h3 {
     margin-top: 2rem;
     font-size: 4rem;
-    color: var(--main-color);
+    color: var(--text-color);
   }
   .cloum {
     margin-top: 5rem;
@@ -577,7 +578,6 @@ span {
   font-family: "Zain", sans-serif;
   font-weight: 900;
   font-size: 2rem;
-  color: #f5f5f5;
   margin-top: 28px;
 }
 .sdya {
@@ -596,7 +596,7 @@ span {
   display: block;
   font-size: 14px;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-color);
 }
 .skill-box .skill-bar {
   height: 8px;
@@ -623,6 +623,10 @@ span {
   transition-delay: 0.4s;
 }
 .skill-per.css.start-animation {
+  width: 85%;
+  transition-delay: 0.45s;
+}
+.skill-per.scss.start-animation {
   width: 80%;
   transition-delay: 0.45s;
 }
@@ -650,13 +654,14 @@ span {
   width: 28%;
   transition-delay: 0.6s;
 }
+
 .skill-per .tooltip {
   position: absolute;
   right: -14px;
   top: -28px;
   font-size: 9px;
   font-weight: 500;
-  color: #fff;
+  color: var(--text-color);
   padding: 2px 6px;
   border-radius: 3px;
   background: #4070f4;
@@ -785,7 +790,7 @@ span {
   color: #fff;
   border: 1px solid #000;
   border-radius: 50%;
-  margin-top: 40px;
+  margin-top: 28px;
   transition: 0.2s ease;
 }
 .card-list .card-item:hover .arrow {
@@ -831,8 +836,7 @@ span {
 }
 .review-card img {
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 60px;
   object-fit: cover;
 }
 .review-details {
@@ -848,7 +852,7 @@ span {
 }
 .reviewer {
   font-weight: 700;
-  color: #fff;
+  color: var(--text-color);
   font-size: 1.4rem;
 }
 .stars {
@@ -860,11 +864,11 @@ span {
   padding: 0 1rem;
   line-height: 1.6;
   font-family: "Zain", sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 .review-text-en {
   font-family: "Ubuntu";
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin: 0.5rem 0;
   padding: 0 1rem;
   line-height: 1.6;
@@ -876,7 +880,7 @@ span {
 .Comments-ms{
   margin-top: 4rem;
   font-size: 36px;
-  color: #feffff;
+  color: var(--text-color);
   text-align: center;
 }
 
@@ -890,7 +894,7 @@ span {
 }
 .review-form h2 {
   margin-bottom: 1rem;
-  color: #fff;
+  color: var(--text-color);
 }
 .form-group {
   margin-bottom: 1rem;
@@ -898,7 +902,7 @@ span {
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #fff;
+  color: var(--text-color);
 }
 .form-group input,
 .form-group textarea,
@@ -908,7 +912,7 @@ span {
   border: 1px solid #333;
   border-radius: 5px;
   background-color: #121212;
-  color: #e0e0e0;
+  color: var(--text-color);
   box-sizing: border-box;
 }
 .form-group textarea {
@@ -920,7 +924,7 @@ span {
   width: 100%;
   padding: 0.8rem;
   background-color: #007bff;
-  color: #fff;
+  color: var(--text-color);
   text-align: center;
   border-radius: 5px;
   text-decoration: none;
@@ -939,7 +943,7 @@ span {
     padding-left: 14rem;
   }
   .reviewer {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
   .review-form {
     background-color: #1e1e1e;
@@ -952,11 +956,11 @@ span {
     max-width: 800px;
   }
   .review-text {
-    font-size: 4rem;
+    font-size: 2.4rem;
     padding: 1rem;
   }
   .review-text-en {
-    font-size: 4rem;
+    font-size: 2.6rem;
   }
   .about-content{
   gap: 2rem;
@@ -970,8 +974,7 @@ span {
     align-items: flex-start;
   }
   .review-card img {
-    width: 50px;
-    height: 50px;
+    width: 44px;
   }
   .comment-button {
     width: 180px;
@@ -1008,7 +1011,7 @@ span {
 .iframe-section {
   font-family: "Roboto", sans-serif;
   background-color: #111;
-  color: #e0e0e0;
+  color: var(--text-color);
   padding: 0;
   font-size: 160%;
   margin: 0;
@@ -1264,7 +1267,7 @@ textarea {
   width: var(--marquee-width);
   height: var(--marquee-height);
   background-color: #111;
-  color: #eee;
+  color: var(--text-color);
   overflow: hidden;
   position: relative;
 }
@@ -1353,4 +1356,87 @@ textarea {
     50% {
         transform: translateY(-20px); /* ارتفاع القفزة */
     }
+}
+.shop{
+  color: var(--text-color);
+  font-size: 1.438rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 4px 2rem 0;
+}
+.d1{
+  text-align: center;
+  color: var(--text-color);
+  font-size: 2rem;
+  margin: 12px 0 0;
+}
+/* From Uiverse.io by satyamchaudharydev */ 
+.spinner {
+ --size: 30px;
+ --first-block-clr: #5d76e9;
+ --second-block-clr: var(--mult-text-2);
+ --clr: #111;
+ width: 100px;
+ height: 100px;
+ position: relative;
+}
+
+.spinner::after,.spinner::before {
+ box-sizing: border-box;
+ position: absolute;
+ content: "";
+ width: var(--size);
+ height: var(--size);
+ top: 50%;
+ animation: up 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+ left: 50%;
+ border: 1px solid #000;
+ background: var(--first-block-clr);
+}
+
+.spinner::after {
+ background: var(--second-block-clr);
+ top: calc(50% - var(--size));
+ left: calc(50% - var(--size));
+ animation: down 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+ border: 1px solid #000;
+}
+
+@keyframes down {
+ 0%, 100% {
+  transform: none;
+ }
+
+ 25% {
+  transform: translateX(100%);
+ }
+
+ 50% {
+  transform: translateX(100%) translateY(100%);
+ }
+
+ 75% {
+  transform: translateY(100%);
+ }
+}
+
+@keyframes up {
+ 0%, 100% {
+  transform: none;
+ }
+
+ 25% {
+  transform: translateX(-100%);
+ }
+
+ 50% {
+  transform: translateX(-100%) translateY(-100%);
+ }
+
+ 75% {
+  transform: translateY(-100%);
+ }
+}
+.arrow i{
+  font-size: 4rem;
 }
