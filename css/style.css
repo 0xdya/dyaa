@@ -13,9 +13,10 @@
   --col-deepblue2: #4578e3;
   --col-deepblue3: #4578e3;
   --bg-color: #0e100f;
-  --services-box: #2A2D2E;
+  --services-box: #28292b;
   --border: #111;
-  --green: #88CE02;
+  --logo: #82aaff;
+  --green: #09dd45;
   --mult-text-2: #fc2;
   --text-color: #FFFFFF;
   --gsap-color: #fffbe0;
@@ -45,6 +46,68 @@ html, body {
     justify-content: center;
     align-items: center;
 }
+.preloader-container {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.loader {
+  width: 20px;
+  height: 40px;
+  border-radius: 10px 50px;
+  box-shadow: 0px 0px 5px black;
+  animation: dominos 1s ease infinite;
+}
+
+.loader:nth-child(1) {
+  --left: 80px;
+  animation-delay: 0.325s;
+  background-color: #5d9960;
+}
+
+.loader:nth-child(2) {
+  --left: 70px;
+  animation-delay: 0.5s;
+  background-color: #82a587;
+}
+
+.loader:nth-child(3) {
+  left: 60px;
+  animation-delay: 0.625s;
+  background-color: #8bac74;
+}
+
+.loader:nth-child(4) {
+  animation-delay: 0.74s;
+  left: 50px;
+  background-color: #b9bf90;
+}
+
+.loader:nth-child(5) {
+  animation-delay: 0.865s;
+  left: 40px;
+  background-color: #e7d2ab;
+}
+
+@keyframes dominos {
+  50% {
+    opacity: 0.7;
+  }
+
+  75% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  80% {
+    opacity: 1;
+  }
+}
+
 /*
 .raccoon-logo {
     width: 100px;
@@ -319,7 +382,7 @@ span {
   color: var(--text-color);
 }
 .home-content h1 {
-  color: var(--gsap-color);
+  color: var(--logo);
   text-align: center;
   font-size: 5.6rem;
   font-weight: 700;
@@ -578,7 +641,9 @@ span {
   font-family: "Zain", sans-serif;
   font-weight: 900;
   font-size: 2rem;
-  margin-top: 28px;
+  color: var(--text-color);
+  text-align: center;
+  margin: 4px 2rem 0;
 }
 .sdya {
   position: relative;
@@ -1370,73 +1435,8 @@ textarea {
   font-size: 2rem;
   margin: 12px 0 0;
 }
-/* From Uiverse.io by satyamchaudharydev */ 
-.spinner {
- --size: 30px;
- --first-block-clr: #5d76e9;
- --second-block-clr: var(--mult-text-2);
- --clr: #111;
- width: 100px;
- height: 100px;
- position: relative;
-}
 
-.spinner::after,.spinner::before {
- box-sizing: border-box;
- position: absolute;
- content: "";
- width: var(--size);
- height: var(--size);
- top: 50%;
- animation: up 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
- left: 50%;
- border: 1px solid #000;
- background: var(--first-block-clr);
-}
-
-.spinner::after {
- background: var(--second-block-clr);
- top: calc(50% - var(--size));
- left: calc(50% - var(--size));
- animation: down 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
- border: 1px solid #000;
-}
-
-@keyframes down {
- 0%, 100% {
-  transform: none;
- }
-
- 25% {
-  transform: translateX(100%);
- }
-
- 50% {
-  transform: translateX(100%) translateY(100%);
- }
-
- 75% {
-  transform: translateY(100%);
- }
-}
-
-@keyframes up {
- 0%, 100% {
-  transform: none;
- }
-
- 25% {
-  transform: translateX(-100%);
- }
-
- 50% {
-  transform: translateX(-100%) translateY(-100%);
- }
-
- 75% {
-  transform: translateY(-100%);
- }
-}
 .arrow i{
   font-size: 4rem;
 }
+
