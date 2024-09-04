@@ -689,35 +689,35 @@ span {
 }
 .skill-per.css.start-animation {
   width: 85%;
-  transition-delay: 0.45s;
+  transition-delay: 0.5s;
 }
 .skill-per.scss.start-animation {
   width: 80%;
-  transition-delay: 0.45s;
-}
-.skill-per.javascript.start-animation {
-  width: 50%;
-  transition-delay: 0.4s;
-}
-.skill-per.reactjs.start-animation {
-  width: 20%;
-  transition-delay: 0.6s;
-}
-.skill-per.git.start-animation {
-  width: 15%;
-  transition-delay: 0.6s;
-}
-.skill-per.php.start-animation {
-  width: 40%;
   transition-delay: 0.6s;
 }
 .skill-per.tailwind.start-animation {
   width: 60%;
-  transition-delay: 0.4s;
+  transition-delay: 0.7s;
+}
+.skill-per.javascript.start-animation {
+  width: 50%;
+  transition-delay: 0.8s;
+}
+.skill-per.reactjs.start-animation {
+  width: 20%;
+  transition-delay: 0.9s;
+}
+.skill-per.git.start-animation {
+  width: 15%;
+  transition-delay: 1s;
+}
+.skill-per.php.start-animation {
+  width: 40%;
+  transition-delay: 1.1s;
 }
 .skill-per.bootstrap.start-animation {
   width: 28%;
-  transition-delay: 0.6s;
+  transition-delay: 0.2s;
 }
 
 .skill-per .tooltip {
