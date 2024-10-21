@@ -1,4 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:wght@400;500&family=Pacifico&family=Zain:wght@200;300;400;700;800;900&display=swap";
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -153,6 +154,8 @@ body {
   background: canvas;
   background: var(--bg-color);
   color: var(--text-color);
+  
+
 }
 body::before {
   --size: 45px;
@@ -386,7 +389,6 @@ span {
   text-align: center;
   font-size: 5.6rem;
   font-weight: 700;
-  line-height: 1.3;
 }
 .home-content p {
   font-size: 1.6rem;
@@ -432,6 +434,10 @@ span {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  border: 2px dashed #333;
+  border-radius: 16px;
+  padding: 16px 0;
+  color: #ededed;
 }
 .btn:hover, .btn-about:hover {
   background-color: var(--mult-text-2);
@@ -439,11 +445,13 @@ span {
   border: none;
 }
   .cloum {
-    background-color: #11111bb;
-    padding: 2rem;
+    background-color: #23232371;
+    padding: 4px 2rem 2rem;
     border-radius: 10px;
-    border: 1px solid #fdfdfdfd;
+    margin: 1rem 2rem 0;
     display: cloum;
+    line-height: 1.4;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
   }
 .cloum a{
   position: absolute;
@@ -460,6 +468,7 @@ span {
 .about-img img {
   pointer-events: none;
   width: 35vw;
+  border-radius: 50%;
 }
 .heading span {
   margin-left: 2rem;
@@ -479,7 +488,6 @@ span {
 }
 .about-content h2 {
   text-align: left;
-  line-height: 1.2;
 }
 .about-content h3 {
   font-size: 2.6rem;
@@ -556,6 +564,7 @@ span {
   }
   .cont {
     gap: 0;
+    
     display: flex;
   }
   .cloum h3 {
@@ -567,13 +576,7 @@ span {
     margin-top: 5rem;
     display: cloum;
   }
-  .about-img img {
-    margin-left: 8rem;
-    pointer-events: none;
-  }
-  .about-img {
-    margin-top: -4rem;
-  }
+
 }
 @media (max-width: 991px) {
   .header {
@@ -629,6 +632,8 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 0 4px;
+    text-decoration: underline wavy var(--green) 2px;
   }
   .Services h2 {
     margin-bottom: 3rem;
@@ -1277,9 +1282,6 @@ textarea {
 }
 .edu {
   font-family: "Robot";
-}
-.cloum p {
-  font-family: "Roboto";
 }
 .frame {
   display: flex;
