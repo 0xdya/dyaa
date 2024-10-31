@@ -468,7 +468,6 @@ span {
 .about-img img {
   pointer-events: none;
   width: 35vw;
-  border-radius: 50%;
 }
 .heading span {
   margin-left: 2rem;
