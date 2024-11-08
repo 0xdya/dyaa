@@ -1,5 +1,9 @@
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:wght@400;500&family=Pacifico&family=Zain:wght@200;300;400;700;800;900&display=swap";
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap");
+   @font-face {
+    font-family: dyaa;
+    src: url(https://dyaa-edin.github.io/nonia/font.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -644,8 +648,9 @@ span {
 .zain {
   font-family: "Zain", sans-serif;
   font-weight: 900;
-  font-size: 2rem;
-  color: var(--text-color);
+  font-size: 1.8rem;
+  line-height: 1.4;
+  color: #ffffffcb;
   text-align: center;
   margin: 4px 2rem 0;
 }
@@ -1441,3 +1446,9 @@ textarea {
   font-size: 4rem;
 }
 
+.arfont{
+  font-size: 1.6rem;
+  color: #edededad;
+  text-align: center;
+  margin: 4px 2rem 0;
+}
