@@ -28,7 +28,6 @@
   --social-media: #7f8c8d;
 }
 html {
-  font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -215,7 +214,7 @@ body::before {
   border: none;
   color: #fff;
   padding: 15px 0;
-  font-size: 24px;
+  font-size: 12px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -248,7 +247,7 @@ body::before {
   border: 2px solid #1212;
   padding: 15px 25px;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 12px;
   color: var(--text-color);
   display: block;
   transition: 0.3s;
@@ -308,14 +307,7 @@ body::before {
     margin-left: 6rem;
     background-color: transparent;
   }
-  .review-text {
-    font-family: "Zain", sans-serif;
-    padding: 1rem 4rem;
-  }
-  .review-text-en {
-    font-size: 10rem;
-    padding: 1rem 4rem;
-  }
+  
 }
 section {
   min-height: 100vh;
@@ -337,14 +329,14 @@ section {
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
 }
 .logo {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: var(--text-color);
   font-weight: 600;
   cursor: default;
 }
 .logo-a {
   color: #fffbe0;
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   text-shadow: 0 0 25px #fffbe0;
   font-weight: 400;
   font-family: "Pacifico";
@@ -375,12 +367,12 @@ section {
 .home-content {
   z-index: 2;
 }
-.home-content h3 {
-  font-size: 3.2rem;
-  font-weight: 700;
+._ {
+  color: white;
 }
-.hello {
-  text-align: center;
+.home-content h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 .home-content h3:nth-of-type(2) {
   margin-bottom: 2rem;
@@ -391,28 +383,29 @@ span {
 .home-content h1 {
   color: var(--logo);
   text-align: center;
-  font-size: 5.6rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 .home-content p {
-  font-size: 1.6rem;
+  font-size: 1rem;
+  color: #888;
 }
 .social-media a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 4rem;
-  height: 4rem;
+  width: 2.2rem;
+  height: 2.2rem;
   background: transparent;
-  border: 0.2rem solid var(--social-media);
+  border: 0.1rem solid var(--social-media);
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 1rem;
   color: var(--social-media);
   margin: 3rem 1.5rem 3rem 0;
   transition: 0.5s ease;
 }
 .social-media a:hover {
-  font-size: 3rem;
+  font-size: 1rem;
   background: var(--text-color);
   color: var(--bg-color);
   box-shadow: 0 0 1rem var(--text-color);
@@ -420,11 +413,11 @@ span {
 
 .btn, .btn-about {
   display: inline-block;
-  padding: 1rem 2.8rem;
+  padding: 1rem 1.8rem;
   background: transparent;
   border-radius: 4rem;
   border: 0.5px solid #fdfdfdfd;
-  font-size: 1.6rem;
+  font-size: 1rem;
   color: var(--green);
   letter-spacing: 0.1rem;
   font-weight: 600;
@@ -462,6 +455,7 @@ span {
   bottom: 4%;
   right: 8%;
 }
+
 .about {
   background: var(--bg-color);
 }
@@ -473,19 +467,16 @@ span {
   pointer-events: none;
   width: 35vw;
 }
-.heading span {
-  margin-left: 2rem;
-}
 .heading {
   text-align: center;
-  font-size: 4.5rem;
+  font-size: 2.5rem;
 }
 .heading-ms span {
   margin-left: 1rem;
 }
 .heading-ms {
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 1.5rem;
   margin-bottom: 5rem;
   margin-top: 7rem;
 }
@@ -493,14 +484,14 @@ span {
   text-align: left;
 }
 .about-content h3 {
-  font-size: 2.6rem;
+  font-size: .6rem;
 }
 .about-content p {
-  font-size: 1.6rem;
+  font-size: 1rem;
   margin: 2rem 0 3rem;
 }
 .Services h2 {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 .Services-container {
   display: flex;
@@ -511,7 +502,7 @@ span {
 }
 .Services-container .Services-box {
   flex: 1 1 30rem;
-  background: var(--services-box);
+  background: #222;
   padding: 3rem 2rem 4rem;
   border-radius: 2rem;
   text-align: center;
@@ -524,11 +515,11 @@ span {
   transform: scale(1.02);
 }
 .Services-box h3 {
-  font-size: 2.6rem;
+  font-size: 1.2rem;
   color: var(--text-color);
 }
 .Services-box p {
-  font-size: 1.6rem;
+  font-size: 1rem;
   margin: 1rem 0 3rem;
   color: var(--text-color);
 }
@@ -537,7 +528,7 @@ span {
   background: var(--bg-color);
 }
 .portfolio i{
-  font-size: 3rem;
+  font-size: 1rem;
 }
 .portfolio h2 {
   margin-bottom: 0;
@@ -556,24 +547,18 @@ span {
 }
 @media (min-width: 1020px) {
   html {
-    font-size: 55%;
   }
   .error {
     margin-left: 30%;
   }
   .lord-icon {
-    margin-top: -10rem;
+    margin-bottom: -143rem;
     position: relative;
   }
   .cont {
     gap: 0;
     
     display: flex;
-  }
-  .cloum h3 {
-    margin-top: 2rem;
-    font-size: 4rem;
-    color: var(--text-color);
   }
   .cloum {
     margin-top: 5rem;
@@ -600,10 +585,10 @@ span {
     flex-direction: column;
   }
   .home-content h3 {
-    font-size: 2.6rem;
+    font-size: 1.6rem;
   }
   .home-content h1 {
-    font-size: 5rem;
+    font-size: 2.8rem;
   }
   .home-img img {
     width: 70vw;
@@ -648,9 +633,9 @@ span {
 .zain {
   font-family: "Zain", sans-serif;
   font-weight: 900;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   line-height: 1.4;
-  color: #ffffffcb;
+  color: #888;
   text-align: center;
   margin: 4px 2rem 0;
 }
@@ -884,73 +869,6 @@ span {
 #video {
   width: 100%;
 }
-.container h1 {
-  font-size: 2rem;
-  margin-bottom: 3rem;
-}
-.container {
-  width: 90%;
-  max-width: 850px;
-  margin: auto;
-  padding: 4rem;
-  box-sizing: border-box;
-}
-.review-card {
-  background-color: #1e1e1e;
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-  box-sizing: border-box;
-  position: relative;
-}
-.review-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-}
-.review-card img {
-  border-radius: 50%;
-  width: 60px;
-  object-fit: cover;
-}
-.review-details {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-.review-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5rem;
-  gap: 1rem;
-}
-.reviewer {
-  font-weight: 700;
-  color: var(--text-color);
-  font-size: 1.4rem;
-}
-.stars {
-  color: #f5c518;
-  font-size: 1.9rem;
-}
-.review-text {
-  margin: 0.5rem 0;
-  padding: 0 1rem;
-  line-height: 1.6;
-  font-family: "Zain", sans-serif;
-  font-size: 1.8rem;
-}
-.review-text-en {
-  font-family: "Ubuntu";
-  font-size: 2rem;
-  margin: 0.5rem 0;
-  padding: 0 1rem;
-  line-height: 1.6;
-}
-.date {
-  font-size: 1.3rem;
-  color: #b0b0b0;
-}
 .Comments-ms{
   margin-top: 4rem;
   font-size: 36px;
@@ -1011,59 +929,16 @@ span {
   background-color: #0056b3;
   transform: scale(1.05);
 }
-@media (min-width: 900px) {
-  .container {
-    padding-right: 14rem;
-    padding-left: 14rem;
-  }
-  .reviewer {
-    font-size: 2.8rem;
-  }
-  .review-form {
-    background-color: #1e1e1e;
-    border-radius: 10px;
-    padding: 1.5rem;
-    margin-top: 2rem;
-    margin-left: 20%;
-    margin-right: 20%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-    max-width: 800px;
-  }
-  .review-text {
-    font-size: 2.4rem;
-    padding: 1rem;
-  }
-  .review-text-en {
-    font-size: 2.6rem;
-  }
-  .about-content{
-  gap: 2rem;
-  padding-right: 12rem;
-  padding-left: 12rem;
-}
-}
 @media (max-width: 768px) {
-  .review-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .review-card img {
-    width: 44px;
-  }
+
   .comment-button {
     width: 180px;
   }
   .Services-box{
-  max-width: 30rem;
+  max-width: 20rem;
 }
 }
 @media (max-width: 480px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-  .review-card {
-    padding: 1rem;
-  }
   .comment-button {
     width: 150px;
     font-size: 1rem;
@@ -1087,7 +962,7 @@ span {
   background-color: #111;
   color: var(--text-color);
   padding: 0;
-  font-size: 160%;
+
   margin: 0;
 }
 .grey-star {
@@ -1146,7 +1021,7 @@ span {
 .title-comments {
   margin-bottom: -8rem;
   margin-right: 2rem;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .space {
   height: 15rem;
@@ -1155,7 +1030,7 @@ span {
   color: #1da1f2;
 }
 .a {
-  font-size: 2rem;
+  font-size: 1rem;
   color: #0000;
   text-decoration: none;
 }
@@ -1272,7 +1147,7 @@ svg {
   animation: bounce 600ms alternate infinite cubic-bezier(0.2, 0.65, 0.6, 1);
 }
 .bxs-pin {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   text-shadow: -6px -3px 2px #000;
   position: absolute;
   rotate: 320deg;
@@ -1285,7 +1160,8 @@ textarea {
   gap: 4px;
 }
 .edu {
-  font-family: "Robot";
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+  font-weight: 600;
 }
 .frame {
   display: flex;
@@ -1327,7 +1203,7 @@ textarea {
 }
 :root {
   --marquee-width: 80vw;
-  --marquee-height: 20rem;
+  --marquee-height: 6rem;
   /* --marquee-elements: 12; */ /* defined with JavaScript */
   --marquee-elements-displayed: 5;
   --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
@@ -1398,7 +1274,7 @@ textarea {
   .marquee:before, .marquee:after { width: 5rem; }
 }
 .marquee-content i{
-  font-size: 5rem;
+  font-size: 2.8rem;
 }
 
 .marquee-section{
@@ -1429,8 +1305,8 @@ textarea {
     }
 }
 .shop{
-  color: var(--text-color);
-  font-size: 1.438rem;
+  color: #888;
+  font-size: 1rem;
   font-weight: 600;
   text-align: center;
   margin: 4px 2rem 0;
@@ -1438,12 +1314,12 @@ textarea {
 .d1{
   text-align: center;
   color: var(--text-color);
-  font-size: 2rem;
+  font-size: 1.4rem;
   margin: 12px 0 0;
 }
 
 .arrow i{
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .arfont{
@@ -1451,4 +1327,128 @@ textarea {
   color: #edededad;
   text-align: center;
   margin: 4px 2rem 0;
+}
+
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        .container h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        .review-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .review-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 1rem 0;
+            margin: 0 0 2.2rem;
+            border-bottom: 1px solid #333;
+            position: relative;
+        }
+        .review-item img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin-left: 1rem;
+        }
+        .review-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .reviewer {
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+        .review-text {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+        .stars {
+            margin-right: auto;
+            text-align: right;
+        }
+        .date {
+            margin-left: auto;
+            margin-right: -4rem;
+            text-align: right;
+            font-size: 0.9rem;
+            color: #b0b0b0;
+            margin-bottom: -1.4rem;
+            margin-top: .4rem;
+        }
+        .stars {
+            color: #f5c518;
+            font-size: 1.2rem;
+            margin-bottom: .4rem;
+        }
+        .owner-like {
+          position: absolute;
+          left: 0;
+          top: 0;
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #ff4444;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+        .owner-like img {
+            width: 12px;
+            height: 13px;
+            border-radius: 50%;
+            margin-left: 0.3rem;
+            border: 1px solid #ff4444;
+        }
+        .owner-like .heart-icon {
+            color: #ff4444;
+            font-size: 1rem;
+            margin-left: -0.8rem;
+            margin-top: 0.8rem;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .owner-like img  {
+                width: 26px;
+                height: 26px;
+            }
+        }
+        .and_im{
+          color: #eee;
+        }
+        .hello {
+  text-align: center;
+  color: #eee;
+}
+.inline{
+    vertical-align: middle;
+    display: inline;
+    }
+  .reves {
+    margin-left: 4px;
+    transform: rotateY(180deg);
+  }
+  .cloum_p{
+  font-size: 2.8rem;
+  line-height: 1.6;
+  color: #ddd;
+  word-spacing: 2px;
+}
+.best_font{
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+  font-weight: 600;
 }
