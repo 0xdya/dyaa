@@ -1467,3 +1467,8 @@ textarea {
   position: absolute;
   right: 0;
 }
+.form-group-label{
+  bottom: -2rem;
+  position: relative;
+  
+}
