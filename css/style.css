@@ -188,9 +188,9 @@ body::before {
 }
 .logo-ph {
   width: 40px;
-  padding-top: 14px;
-  padding-bottom: 10px;
-  border-radius: 50px;
+  height: 40px;
+  margin-bottom: -2.7rem;
+  border-radius: 50%;
 }
 .navbar-section {
   display: flex;
@@ -1384,12 +1384,18 @@ textarea {
         }
         .date {
             margin-left: auto;
-            margin-right: -4rem;
+            margin-right: -2.9rem;
             text-align: right;
             font-size: 0.9rem;
             color: #b0b0b0;
-            margin-bottom: -1.4rem;
+            margin-bottom: -1.5rem;
             margin-top: .4rem;
+        }
+        .bx-time-five{
+          position: absolute;
+          bottom: 1.9rem;
+          right: 0;
+          font-size: 1rem;
         }
         .stars {
             color: #f5c518;
@@ -1412,13 +1418,14 @@ textarea {
             height: 13px;
             border-radius: 50%;
             margin-left: 0.3rem;
-            border: 1px solid #ff4444;
+            border: .1px solid black;
         }
         .owner-like .heart-icon {
             color: #ff4444;
-            font-size: 1rem;
-            margin-left: -0.8rem;
+            font-size: .8rem;
+            margin-left: -0.6rem;
             margin-top: 0.8rem;
+            z-index: 99;
         }
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -1438,6 +1445,7 @@ textarea {
     vertical-align: middle;
     display: inline;
     }
+
   .reves {
     margin-left: 4px;
     transform: rotateY(180deg);
@@ -1449,6 +1457,13 @@ textarea {
   word-spacing: 2px;
 }
 .best_font{
-  font-family: "Baloo Bhaijaan 2", sans-serif;
-  font-weight: 600;
+  font-family: "Zain", sans-serif;
+  font-weight: 900;
+}
+.pin{
+  font-size: 1.2rem;
+}
+.x-time-five{
+  position: absolute;
+  right: 0;
 }
