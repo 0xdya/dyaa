@@ -16,6 +16,8 @@
 :root {
   --col-deepblue1: #4578e3;
   --col-deepblue2: #4578e3;
+      --color-light-purple: #cf59e6;
+    --color-light-blue: #6bc5f8;
   --col-deepblue3: #4578e3;
   --bg-color: #0e100f;
   --services-box: #28292b;
@@ -416,7 +418,7 @@ span {
   padding: 1rem 1.8rem;
   background: transparent;
   border-radius: 4rem;
-  border: 0.5px solid #fdfdfdfd;
+  border: 2px solid #444;
   font-size: 1rem;
   color: var(--green);
   letter-spacing: 0.1rem;
@@ -479,7 +481,7 @@ span {
 .Services-box p {
   font-size: 1rem;
   margin: 1rem 0 3rem;
-  color: var(--text-color);
+  color: #6c757d;
 }
 .portfolio {
   margin: 6rem 0;
@@ -1485,7 +1487,7 @@ textarea {
         }
         .cloum {
     background-color: #23232371;
-    padding: 4px 2rem 2rem;
+    padding: 1rem 1.4rem;
     border-radius: 10px;
     display: cloum;
     line-height: 1.4;
@@ -1506,4 +1508,51 @@ textarea {
   padding: 0;
   margin: 0;
   max-width: 9040px; !important
-}
+} 
+.notification {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fffbe0; /* لون داكن للإشعار */
+            color: #111;
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            opacity: 0;
+            transform: translateY(-30px) translateX(-50%);
+            transition: opacity 0.5s, transform 0.5s;
+            width: 75%; /* عرض أصغر */
+            max-width: 350px; /* حد أقصى للحجم */
+            z-index: 99999;
+        }
+
+        .notification.show-nf {
+            opacity: 1;
+            transform: translateY(0) translateX(-50%);
+        }
+
+        .notification-icon {
+            width: 40px;
+            height: 40px;
+            background-image: url('https://dyaa-edin.netlify.app/img/dyaa.webp'); /* يمكنك وضع صورة هنا */
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+
+        .notification-message {
+            flex: 1;
+            font-size: 16px;
+        }
+
+        .notification-name {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
