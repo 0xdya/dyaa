@@ -1,4 +1,14 @@
-window.addEventListener("load",function(){let e=document.images,t=e.length,n=0;function s(){++n===t&&(document.getElementById("preloader").style.display="none",document.documentElement.style.overflow="visible",document.body.style.overflow="auto")}if(0===t)s();else for(let o=0;o<t;o++)e[o].complete?s():(e[o].addEventListener("load",s),e[o].addEventListener("error",s))}),
+document.addEventListener("DOMContentLoaded", function() {
+    let preloader = document.getElementById("preloader");
+    preloader.style.transition = "opacity 1s ease-out";
+    preloader.style.opacity = "0";
+    setTimeout(() => preloader.style.display = "none", 1000);
+    
+    document.documentElement.style.overflow = "visible";
+    document.body.style.overflow = "auto";
+});
+
+// تأثيرات ScrollReveal
 ScrollReveal({
   reset: false,
   distance: "60px",
@@ -11,4 +21,163 @@ ScrollReveal().reveal(".top", { origin: "top" });
 ScrollReveal().reveal(".bottom", { origin: "bottom" });
 ScrollReveal().reveal(".left", { origin: "left" });
 ScrollReveal().reveal(".right", { origin: "right" });
-const typed=new Typed(".multiple-text",{strings:["a Programmer","an Editor","an artist","a Designer","Writer"],typeSpeed:100,backSpeed:100,backDelay:1e3,loop:!0});document.addEventListener("DOMContentLoaded",function(){let e=new IntersectionObserver(t=>{t.forEach(t=>{t.isIntersecting&&(t.target.classList.add("start-animation"),e.unobserve(t.target))})},{threshold:.1});document.querySelectorAll(".skill-per").forEach(t=>{e.observe(t)})});const scrollers=document.querySelectorAll(".scroller");function addAnimation(){scrollers.forEach(e=>{e.setAttribute("data-animated",!0);let t=e.querySelector(".scroller__inner"),n=Array.from(t.children);n.forEach(e=>{let n=e.cloneNode(!0);n.setAttribute("aria-hidden",!0),t.appendChild(n)})})}function updateStars(e){document.querySelectorAll(".stars-container .star").forEach(t=>{parseInt(t.getAttribute("data-value"))<=e?t.classList.add("checked"):t.classList.remove("checked")})}function setImageValue(e){document.getElementById("img-value").value=e}window.matchMedia("(prefers-reduced-motion: reduce)").matches||addAnimation(),document.getElementById("reviewForm").addEventListener("submit",function(e){setTimeout(()=>{e.target.reset()},3e3)}),document.querySelectorAll(".stars-container .star").forEach(e=>{e.addEventListener("click",function(){let e=this.getAttribute("data-value");document.getElementById("stars").value=e,updateStars(e)}),e.addEventListener("mouseover",function(){let e=this.getAttribute("data-value");updateStars(e)}),e.addEventListener("mouseout",function(){let e=document.getElementById("stars").value;updateStars(e)})}),document.getElementById("reviewForm").addEventListener("submit",function(e){let t=document.getElementById("email"),n=t.value;/^[^\s@]+@gmail\.com$/.test(n)||(alert("  تستخدم بريد مزيف  - _ -  ؟                                                               استخدم بريد حقيقي ليتم ارسال الرسالة"),t.focus(),e.preventDefault())}),document.addEventListener("DOMContentLoaded",function(){var e=document.querySelector(".profile-preview-btn"),t=document.querySelector(".select-items"),n=document.getElementById("profile-picture-preview");e.addEventListener("click",function(){t.classList.toggle("select-hide"),t.style.display="none"!==t.style.display&&t.style.display?"none":"grid"}),document.querySelectorAll(".select-items div").forEach(function(e){e.addEventListener("click",function(){var s=e.getAttribute("data-img");n.src=s,t.style.display="none"})}),document.addEventListener("click",function(e){e.target.closest(".profile-preview-btn")||e.target.closest(".select-items")||(t.style.display="none")})});const sidebar=document.getElementById("sidebar"),toggleButton=document.getElementById("navbar-toggle"),closeButton=document.getElementById("closebtn");function toggleSidebar(){sidebar.classList.contains("open")?(sidebar.classList.remove("open"),sidebar.classList.add("close"),toggleButton.classList.remove("open")):(sidebar.classList.remove("close"),sidebar.classList.add("open"),toggleButton.classList.add("open"))}toggleButton.addEventListener("click",toggleSidebar),closeButton.addEventListener("click",toggleSidebar),document.addEventListener("click",function(e){!sidebar.classList.contains("open")||toggleButton.contains(e.target)||sidebar.contains(e.target)||(sidebar.classList.remove("open"),sidebar.classList.add("close"),toggleButton.classList.remove("open"))});const sidebarLinks=sidebar.querySelectorAll("a");sidebarLinks.forEach(e=>{e.addEventListener("click",function(){sidebar.classList.contains("open")&&(sidebar.classList.remove("open"),sidebar.classList.add("close"),toggleButton.classList.remove("open"))})}),document.addEventListener("DOMContentLoaded",function(){let e=document.querySelectorAll(".date");e.forEach(e=>{let t=e.getAttribute("data-date"),n=new Date(t),s=new Date,o=s-n,l=Math.floor(o/864e5),a=Math.floor(l/7),r=Math.floor(l/30),d="";if(l<1){let c=Math.floor(o/36e5);d=c<1?`قبل ${Math.floor(o/6e4)} دقيقة`:`قبل ${c} ساعة`}else d=l<=2?`قبل ${l} يوم`:l<=6?`قبل ${l} أيام`:a<=2?`قبل ${a} أسبوع`:a<=4?`قبل ${a} أسابيع`:r<=2?`قبل ${r} شهر`:`قبل ${r} أشهر`;e.textContent=d})});const root=document.documentElement,marqueeElementsDisplayed=getComputedStyle(root).getPropertyValue("--marquee-elements-displayed"),marqueeContent=document.querySelector("ul.marquee-content");root.style.setProperty("--marquee-elements",marqueeContent.children.length);for(let i=0;i<marqueeElementsDisplayed;i++)marqueeContent.appendChild(marqueeContent.children[i].cloneNode(!0));document.querySelectorAll(".btn").forEach(function(e){e.addEventListener("click",function(){this.classList.toggle("active");let e=this.previousElementSibling;e.style.display="block"===e.style.display?"none":"block","block"===e.style.display?this.textContent="إخفاء الوصف":this.textContent="عرض الوضف"})});
+
+// تأثير الكتابة المتحركة
+const typed = new Typed(".multiple-text", {
+    strings: ["a Programmer", "an Editor", "an artist", "a Designer", "Writer"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+});
+
+// تحريك المهارات عند ظهورها
+document.addEventListener("DOMContentLoaded", function() {
+    let observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("start-animation");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(".skill-per").forEach(skill => {
+        observer.observe(skill);
+    });
+});
+
+// إضافة تأثير التحريك للعناصر القابلة للتمرير
+const scrollers = document.querySelectorAll(".scroller");
+function addAnimation() {
+    scrollers.forEach(scroller => {
+        scroller.setAttribute("data-animated", "true");
+        let inner = scroller.querySelector(".scroller__inner"),
+            children = Array.from(inner.children);
+
+        children.forEach(child => {
+            let clone = child.cloneNode(true);
+            clone.setAttribute("aria-hidden", "true");
+            inner.appendChild(clone);
+        });
+    });
+}
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    addAnimation();
+}
+
+// تقييم النجوم في المراجعات
+function updateStars(value) {
+    document.querySelectorAll(".stars-container .star").forEach(star => {
+        parseInt(star.getAttribute("data-value")) <= value
+            ? star.classList.add("checked")
+            : star.classList.remove("checked");
+    });
+}
+
+// التحقق من البريد الإلكتروني قبل إرسال النموذج
+document.getElementById("reviewForm").addEventListener("submit", function(event) {
+    let emailField = document.getElementById("email");
+    let emailValue = emailField.value;
+    if (!/^[^\s@]+@gmail\.com$/.test(emailValue)) {
+        alert("  تستخدم بريد مزيف - _ - ؟ استخدم بريدًا حقيقيًا ليتم إرسال الرسالة");
+        emailField.focus();
+        event.preventDefault();
+    }
+});
+
+// إظهار قائمة الصور في الملف الشخصي
+document.addEventListener("DOMContentLoaded", function() {
+    let profileBtn = document.querySelector(".profile-preview-btn");
+    let selectItems = document.querySelector(".select-items");
+    let profileImg = document.getElementById("profile-picture-preview");
+
+    profileBtn.addEventListener("click", function() {
+        selectItems.style.display = (selectItems.style.display === "none" || !selectItems.style.display) ? "grid" : "none";
+    });
+
+    document.querySelectorAll(".select-items div").forEach(item => {
+        item.addEventListener("click", function() {
+            let imgSrc = item.getAttribute("data-img");
+            profileImg.src = imgSrc;
+            selectItems.style.display = "none";
+        });
+    });
+
+    document.addEventListener("click", function(event) {
+        if (!event.target.closest(".profile-preview-btn") && !event.target.closest(".select-items")) {
+            selectItems.style.display = "none";
+        }
+    });
+});
+
+// الشريط الجانبي
+const sidebar = document.getElementById("sidebar"),
+      toggleButton = document.getElementById("navbar-toggle"),
+      closeButton = document.getElementById("closebtn");
+
+function toggleSidebar() {
+    sidebar.classList.toggle("open");
+    sidebar.classList.toggle("close");
+    toggleButton.classList.toggle("open");
+}
+toggleButton.addEventListener("click", toggleSidebar);
+closeButton.addEventListener("click", toggleSidebar);
+
+// إغلاق القائمة الجانبية عند الضغط في أي مكان خارجها
+document.addEventListener("click", function(event) {
+    if (sidebar.classList.contains("open") && !toggleButton.contains(event.target) && !sidebar.contains(event.target)) {
+        sidebar.classList.remove("open");
+        sidebar.classList.add("close");
+        toggleButton.classList.remove("open");
+    }
+});
+
+// التحديث التلقائي للتواريخ
+document.addEventListener("DOMContentLoaded", function() {
+    let dateElements = document.querySelectorAll(".date");
+
+    dateElements.forEach(element => {
+        let dataDate = element.getAttribute("data-date");
+        let date = new Date(dataDate);
+        let now = new Date();
+        let diff = now - date;
+        let days = Math.floor(diff / 86400000);
+        let weeks = Math.floor(days / 7);
+        let months = Math.floor(days / 30);
+        let message = "";
+
+        if (days < 1) {
+            let hours = Math.floor(diff / 3600000);
+            message = hours < 1 ? `قبل ${Math.floor(diff / 60000)} دقيقة` : `قبل ${hours} ساعة`;
+        } else if (days <= 6) {
+            message = `قبل ${days} ${days === 1 ? "يوم" : "أيام"}`;
+        } else if (weeks <= 4) {
+            message = `قبل ${weeks} ${weeks === 1 ? "أسبوع" : "أسابيع"}`;
+        } else {
+            message = `قبل ${months} ${months === 1 ? "شهر" : "أشهر"}`;
+        }
+
+        element.textContent = message;
+    });
+});
+
+// تحريك شريط الأخبار
+const root = document.documentElement;
+const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+const marqueeContent = document.querySelector("ul.marquee-content");
+
+root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+for (let i = 0; i < marqueeElementsDisplayed; i++) {
+    marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+}
+
+// إظهار وإخفاء الوصف عند الضغط على الزر
+document.querySelectorAll(".btn").forEach(button => {
+    button.addEventListener("click", function() {
+        this.classList.toggle("active");
+        let description = this.previousElementSibling;
+        description.style.display = description.style.display === "block" ? "none" : "block";
+        this.textContent = description.style.display === "block" ? "إخفاء الوصف" : "عرض الوصف";
+    });
+});
