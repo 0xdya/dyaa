@@ -441,14 +441,18 @@ span {
   text-align: center;
   font-size: 2.5rem;
 }
-.heading-ms span {
+.heading span {
   margin-left: 1rem;
+  text-decoration: underline wavy var(--green) 2px;
 }
 .heading-ms {
   text-align: center;
   font-size: 1.5rem;
   margin-bottom: 5rem;
   margin-top: 7rem;
+}
+.beta{
+  margin-top: 2rem;
 }
 .Services h2 {
   margin-bottom: 2rem;
@@ -549,9 +553,6 @@ span {
     text-decoration: underline wavy var(--green) 2px;
   }
   .Services h2 {
-    margin-bottom: 3rem;
-  }
-  .portfolio h2 {
     margin-bottom: 3rem;
   }
 }
